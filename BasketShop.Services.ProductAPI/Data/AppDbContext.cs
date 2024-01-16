@@ -18,38 +18,38 @@ namespace BasketShop.Services.ProductAPI.Data
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 ProductId = 1,
-                Name = "Samosa",
-                Price = 15,
-                Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
-                ImageUrl = "https://placehold.co/603x403",
-                CategoryName = "Appetizer"
+                Name = "Spalding ball",
+                Price = 100,
+                Description = "The latest model with improvements - the TF 1000 Legacy basketball, the official ball of PLK (Polska Liga Koszykarska)",
+                ImageUrl = "https://m.media-amazon.com/images/I/61cgmAgv1-S._AC_UF894,1000_QL80_.jpg",
+                CategoryName = "Ball"
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 ProductId = 2,
-                Name = "Paneer Tikka",
-                Price = 13.99,
-                Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
-                ImageUrl = "https://placehold.co/602x402",
-                CategoryName = "Appetizer"
+                Name = "Wilson NBA Los Angeles Lakers mini basketball backboard",
+                Price = 150,
+                Description = "The Wilson mini basketball backboard is the perfect solution for any basketball fan who wants to play in the room",
+                ImageUrl = "https://neonn.pl/data/gfx/pictures/large/7/0/8107_1.png?77480",
+                CategoryName = "Board"
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 ProductId = 3,
-                Name = "Sweet Pie",
-                Price = 10.99,
-                Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
-                ImageUrl = "https://placehold.co/601x401",
-                CategoryName = "Dessert"
+                Name = "Air Jordan 1 High OG „Satin Bred",
+                Price = 800,
+                Description = "Satin shine and iconic colors are a combination you must have in your wardrobe. And a classic cut.",
+                ImageUrl = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1eac4e3d-869d-44f3-abb3-233eea2f68f1/buty-air-jordan-1-high-og-satin-bred-gmhC5X.png",
+                CategoryName = "Shoes"
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
                 ProductId = 4,
-                Name = "Pav Bhaji",
-                Price = 15,
-                Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
-                ImageUrl = "https://placehold.co/600x400",
-                CategoryName = "Entree"
+                Name = "Nike NBA Swingman T-shirt",
+                Price = 400,
+                Description = "The Icon Edition T-shirt represents the true colors of the team and stands out with its distinctive, recognizable style. Inspired by the uniforms worn by professional players, the Nike NBA Swingman Golden State Warriors Icon Edition T-shirt is made of high-quality double-knit fabric and has a classic cut that looks great from any angle.",
+                ImageUrl = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ff50ee77-053c-4d83-9b51-980752e6e85a/koszulka-dla-duzych-nba-swingman-warriors-icon-edition-22VQBL.png",
+                CategoryName = "T-shirt"
             });
         }
     }

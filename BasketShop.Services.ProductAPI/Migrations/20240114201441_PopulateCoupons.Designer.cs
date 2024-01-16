@@ -3,6 +3,7 @@ using BasketShop.Services.ProductAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BasketShop.Services.ProductAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240114201441_PopulateCoupons")]
+    partial class PopulateCoupons
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,7 +63,7 @@ namespace BasketShop.Services.ProductAPI.Migrations
                             ProductId = 1,
                             CategoryName = "Ball",
                             Description = "The latest model with improvements - the TF 1000 Legacy basketball, the official ball of PLK (Polska Liga Koszykarska)",
-                            ImageUrl = "https://m.media-amazon.com/images/I/61cgmAgv1-S._AC_UF894,1000_QL80_.jpg",
+                            ImageUrl = "https://sklepkoszykarski.pl/userdata/public/gfx/6091/Oficjalna-pilka-Spalding-TF-1000-Legacy.jpg",
                             Name = "Spalding ball",
                             Price = 100.0
                         },
@@ -69,7 +72,7 @@ namespace BasketShop.Services.ProductAPI.Migrations
                             ProductId = 2,
                             CategoryName = "Board",
                             Description = "The Wilson mini basketball backboard is the perfect solution for any basketball fan who wants to play in the room",
-                            ImageUrl = "https://neonn.pl/data/gfx/pictures/large/7/0/8107_1.png?77480",
+                            ImageUrl = "https://sklepkoszykarski.pl/userdata/public/gfx/6381/Mini-tablica-do-koszykowki-Wilson-NBA-Los-Angeles-Lakers.jpg",
                             Name = "Wilson NBA Los Angeles Lakers mini basketball backboard",
                             Price = 150.0
                         },

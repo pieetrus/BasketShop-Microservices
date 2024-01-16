@@ -3,6 +3,7 @@ using BasketShop.Services.ProductAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BasketShop.Services.ProductAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240114201313_PopulateProducts")]
+    partial class PopulateProducts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,7 +63,7 @@ namespace BasketShop.Services.ProductAPI.Migrations
                             ProductId = 1,
                             CategoryName = "Ball",
                             Description = "The latest model with improvements - the TF 1000 Legacy basketball, the official ball of PLK (Polska Liga Koszykarska)",
-                            ImageUrl = "https://m.media-amazon.com/images/I/61cgmAgv1-S._AC_UF894,1000_QL80_.jpg",
+                            ImageUrl = "https://sklepkoszykarski.pl/userdata/public/gfx/6091/Oficjalna-pilka-Spalding-TF-1000-Legacy.jpg",
                             Name = "Spalding ball",
                             Price = 100.0
                         },
@@ -69,7 +72,7 @@ namespace BasketShop.Services.ProductAPI.Migrations
                             ProductId = 2,
                             CategoryName = "Board",
                             Description = "The Wilson mini basketball backboard is the perfect solution for any basketball fan who wants to play in the room",
-                            ImageUrl = "https://neonn.pl/data/gfx/pictures/large/7/0/8107_1.png?77480",
+                            ImageUrl = "https://sklepkoszykarski.pl/userdata/public/gfx/6381/Mini-tablica-do-koszykowki-Wilson-NBA-Los-Angeles-Lakers.jpg",
                             Name = "Wilson NBA Los Angeles Lakers mini basketball backboard",
                             Price = 150.0
                         },
@@ -87,7 +90,7 @@ namespace BasketShop.Services.ProductAPI.Migrations
                             ProductId = 4,
                             CategoryName = "T-shirt",
                             Description = "The Icon Edition T-shirt represents the true colors of the team and stands out with its distinctive, recognizable style. Inspired by the uniforms worn by professional players, the Nike NBA Swingman Golden State Warriors Icon Edition T-shirt is made of high-quality double-knit fabric and has a classic cut that looks great from any angle.",
-                            ImageUrl = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ff50ee77-053c-4d83-9b51-980752e6e85a/koszulka-dla-duzych-nba-swingman-warriors-icon-edition-22VQBL.png",
+                            ImageUrl = "https://www.nike.com/pl/t/koszulka-dla-duzych-nba-swingman-warriors-icon-edition-22VQBL/CZ6212-495",
                             Name = "Nike NBA Swingman T-shirt",
                             Price = 400.0
                         });

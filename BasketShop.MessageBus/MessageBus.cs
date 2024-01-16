@@ -6,8 +6,7 @@ namespace BasketShop.MessageBus
 {
     public class MessageBus : IMessageBus
     {
-
-        private string connectionString = "Endpoint=sb://basketshop.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=HjoslS58pPHtAULb0tay/jx4Ys0+MO5/R+ASbCcFTG0=";
+        private string connectionString = "Endpoint=sb://basketshop.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FIrKIz1MFHy3J51S31nmuROsYTyPXwuC1+ASbF6OZZc=";
 
         public async Task PublishMessage(object message, string topic_queue_Name)
         {

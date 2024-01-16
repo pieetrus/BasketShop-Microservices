@@ -1,16 +1,15 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Stripe.Checkout;
-using Stripe;
-using Microsoft.EntityFrameworkCore;
-using BasketShop.Services.OrderAPI.Models.Dto;
-using BasketShop.Services.OrderAPI.Utility;
+using BasketShop.MessageBus;
 using BasketShop.Services.OrderAPI.Data;
 using BasketShop.Services.OrderAPI.Models;
+using BasketShop.Services.OrderAPI.Models.Dto;
 using BasketShop.Services.OrderAPI.Service.IService;
-using BasketShop.MessageBus;
+using BasketShop.Services.OrderAPI.Utility;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Stripe;
+using Stripe.Checkout;
 
 namespace BasketShop.Services.OrderAPI.Controllers
 {
