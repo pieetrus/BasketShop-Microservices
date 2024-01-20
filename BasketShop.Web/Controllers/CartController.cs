@@ -105,7 +105,11 @@ namespace BasketShop.Web.Controllers
                 TempData["success"] = "Cart updated successfully";
                 return RedirectToAction(nameof(CartIndex));
             }
-            return View();
+            else
+            {
+                TempData["error"] = "There is some problem w Coupon service now and coupon cannot be applied";
+                return RedirectToAction(nameof(CartIndex));
+            }
         }
 
         [HttpPost]

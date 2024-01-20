@@ -4,10 +4,8 @@ using BasketShop.Services.ShoppingCartAPI.Data;
 using BasketShop.Services.ShoppingCartAPI.Models;
 using BasketShop.Services.ShoppingCartAPI.Models.Dto;
 using BasketShop.Services.ShoppingCartAPI.Service.IService;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.PortableExecutable;
 
 namespace BasketShop.Services.ShoppingCartAPI.Controllers
 {
@@ -56,11 +54,18 @@ namespace BasketShop.Services.ShoppingCartAPI.Controllers
                 //apply coupon if any
                 if (!string.IsNullOrEmpty(cart.CartHeader.CouponCode))
                 {
-                    CouponDto coupon = await _couponService.GetCoupon(cart.CartHeader.CouponCode);
-                    if (coupon != null && cart.CartHeader.CartTotal > coupon.MinAmount)
+                    try
                     {
-                        cart.CartHeader.CartTotal -= coupon.DiscountAmount;
-                        cart.CartHeader.Discount = coupon.DiscountAmount;
+                        CouponDto coupon = await _couponService.GetCoupon(cart.CartHeader.CouponCode);
+                        if (coupon != null && cart.CartHeader.CartTotal > coupon.MinAmount)
+                        {
+                            cart.CartHeader.CartTotal -= coupon.DiscountAmount;
+                            cart.CartHeader.Discount = coupon.DiscountAmount;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        cart.CartHeader.Discount = -1;
                     }
                 }
 

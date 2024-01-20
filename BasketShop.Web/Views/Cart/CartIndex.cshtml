@@ -79,6 +79,10 @@
                         {
                             <span class="text-success"> Order Discount :   @string.Format("{0:c}", Model.CartHeader.Discount ) </span>
                         }
+                        @if (Model.CartHeader.Discount == -1)
+                        {
+                            <span class="text-error"> Order Discount :   There is some problem with Coupon service and discount could not be applied </span>
+                        }
                     </div>
                 </div>
             </div>
